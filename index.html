@@ -2,27 +2,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Hello Leaflet</title>
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>ArcGIS Maps SDK for JavaScript Tutorials: Display a map</title>
 
- <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-<style>
-    #map { height: 75vh; }
-    #map { width: 75vh;}
-    
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+     <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
+     <script src="https://js.arcgis.com/4.28/"></script>
+     <script>
+      require(["esri/config", "esri/Map", "esri/views/MapView"], function(esriConfig, Map, MapView) {
+        esriConfig.apiKey = "AAPKf8d644b52cbe4547a6cf52b1dba78051_Xpnbv3L-3KkoIsY1iWO_jYtkKVaijNoYbTnhR3zdus6mF7v3nz5cP8PVYixqbxo";
 
-</style>
+        const map = new Map({
+          basemap: "arcgis/topographic" // basemap styles service
+        });
+      });
+    </script>
 </head>
 
 <body>
-    <div id="map"></div>
+    <div id="viewDiv"></div>
 
     <script>
         var map = L.map('map').setView([51.505, -0.09], 13);
