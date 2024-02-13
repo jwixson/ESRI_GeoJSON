@@ -75,9 +75,7 @@
       // Use the Arcade Date() function to format time field into a human-readable format
       const template = {
         title: "MegaCity Information",
-        content: "City Name {City}
-        Population (1985): {Pop_1985}
-        Population (2015): {Pop_2015}",
+        content: "City Name {City}, Population (1985): {Pop_1985},        Population (2015): {Pop_2015}",
         
         };
 
@@ -116,17 +114,17 @@
         }
       });
 
-      const map = new Map({
-        basemap: "gray-vector",
-        layers: [geojsonLayer]
-      });
+      // const map = new Map({
+      //   basemap: "gray-vector",
+      //   layers: [geojsonLayer]
+      // });
 
-      const view = new MapView({
-        container: "viewDiv",
-        center: [-0, 0],
-        zoom: 5,
-        map: map
-      });
+      // const view = new MapView({
+      //   container: "viewDiv",
+      //   center: [-0, 0],
+      //   zoom: 5,
+      //   map: map
+      // });
     });
 
   </script>
