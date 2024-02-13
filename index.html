@@ -27,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/1.9.2/calcite.css" />
 
     <script>
-      require(["esri/config", "esri/Map", "esri/views/MapView"], function(esriConfig, Map, MapView) {
+      require(["esri/config", "esri/Map", "esri/views/MapView"], function(esriConfig, Map, MapView, GeoJSONLayer) {
 
         esriConfig.apiKey = "AAPKf8d644b52cbe4547a6cf52b1dba78051_Xpnbv3L-3KkoIsY1iWO_jYtkKVaijNoYbTnhR3zdus6mF7v3nz5cP8PVYixqbxo";
 
@@ -53,15 +53,13 @@
       });
 
         
-      });
-    // </script>
 
-    // <script>
-    require(["esri/Map", "esri/layers/GeoJSONLayer", "esri/views/MapView"], (
-      Map,
-      GeoJSONLayer,
-      MapView
-    ) => {
+
+    // require(["esri/Map", "esri/layers/GeoJSONLayer", "esri/views/MapView"], (
+    //   Map,
+    //   GeoJSONLayer,
+    //   MapView
+    // ) => {
       // If GeoJSON files are not on the same domain as your website, a CORS enabled server
       // or a proxy is required.
       const url = "map.geojson";
@@ -75,7 +73,7 @@
       // Use the Arcade Date() function to format time field into a human-readable format
       const template = {
         title: "MegaCity Information",
-        content: "City Name {City}, Population (1985): {Pop_1985},        Population (2015): {Pop_2015}",
+        content: "City Name {City}, Population (1985): {Pop_1985}, Population (2015): {Pop_2015}",
         
         };
 
