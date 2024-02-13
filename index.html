@@ -27,11 +27,15 @@
     <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/1.9.2/calcite.css" />
 
     <script>
-        require(["esri/Map", "esri/layers/GeoJSONLayer", "esri/views/MapView"], (
+        require(["esri/config","esri/Map", "esri/layers/GeoJSONLayer", "esri/views/MapView"], (
+      esriConfig,
       Map,
       GeoJSONLayer,
       MapView
     ) => {
+
+      esriConfig.apiKey = "AAPKf8d644b52cbe4547a6cf52b1dba78051_Xpnbv3L-3KkoIsY1iWO_jYtkKVaijNoYbTnhR3zdus6mF7v3nz5cP8PVYixqbxo";
+      
       const url = "map.geojson";
       const template = {
         title: "MegaCity Information",
@@ -71,13 +75,8 @@
         //   field: "Pop_2015"
         // }
       });
-         });
+ 
 
-    
-
-      require(["esri/config", "esri/Map", "esri/views/MapView"], function(esriConfig, Map, MapView, GeoJSONLayer) {
-
-        esriConfig.apiKey = "AAPKf8d644b52cbe4547a6cf52b1dba78051_Xpnbv3L-3KkoIsY1iWO_jYtkKVaijNoYbTnhR3zdus6mF7v3nz5cP8PVYixqbxo";
       const map = new Map({
           basemap: "arcgis/topographic", // basemap styles service
           layers: [geojsonLayer] //basemap: "arcgis/aerial"
