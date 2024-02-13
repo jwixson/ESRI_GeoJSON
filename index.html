@@ -73,7 +73,7 @@
       // * place - location of the event
       // * time - the time of the event
       // Use the Arcade Date() function to format time field into a human-readable format
-      const popchange = {Pop_2015} - {Pop_1985}
+      let popchange = {Pop_2015} - {Pop_1985}
       const template = {
         title: "MegaCity Information",
         content: "City Name {City}\nPopulation (1985): {Pop_1985} \nPopulation (2015): {Pop_2015} \nPopulation Change:popchange",
@@ -121,7 +121,7 @@
 
       const view = new MapView({
         container: "viewDiv",
-        center: [-168, 46],
+        center: [-0, 0],
         zoom: 2,
         map: map
       });
@@ -137,7 +137,7 @@
     <calcite-label>Basemap style</calcite-label>
     <calcite-combobox id="styleCombobox" selection-mode="single" clear-disabled>
       <calcite-combobox-item value="arcgis/streets" text-label="Streets"></calcite-combobox-item>
-      <calcite-combobox-item value="arcgis/outdoor" text-label="arcgis/outdoor"></calcite-combobox-item>
+      <calcite-combobox-item value="arcgis/outdoor" text-label="Outdoor"></calcite-combobox-item>
       <calcite-combobox-item value="arcgis/imagery" text-label="Imagery"></calcite-combobox-item>
 
     </calcite-combobox>
