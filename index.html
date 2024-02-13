@@ -39,7 +39,7 @@
         const view = new MapView({
           map: map,
           center: [0,0], // Longitude, latitude
-          zoom: 2, // Zoom level
+          zoom: 5, // Zoom level
           container: "viewDiv" // Div element
         });
       const updateBasemapStyle = (basemapId) => {
@@ -73,10 +73,10 @@
       // * place - location of the event
       // * time - the time of the event
       // Use the Arcade Date() function to format time field into a human-readable format
-      let popchange = {Pop_2015} - {Pop_1985}
       const template = {
         title: "MegaCity Information",
-        content: "City Name {City}\nPopulation (1985): {Pop_1985} \nPopulation (2015): {Pop_2015} \nPopulation Change:popchange",
+        content: "City Name {City}"\n"Population (1985): {Pop_1985} "\n"Population (2015): {Pop_2015} "\n"Population Change:popchange",
+        
         };
 
       const renderer = {
@@ -122,7 +122,7 @@
       const view = new MapView({
         container: "viewDiv",
         center: [-0, 0],
-        zoom: 2,
+        zoom: 5,
         map: map
       });
     });
