@@ -75,7 +75,7 @@
       // Use the Arcade Date() function to format time field into a human-readable format
       const template = {
         title: "MegaCity Information",
-        content: "City Name {City}"\n"Population (1985): {Pop_1985} "\n"Population (2015): {Pop_2015} "\n"Population Change:popchange",
+        content: "City Name {City}, Population (1985): {Pop_1985}, Population (2015): {Pop_2015}, Population Change:popchange",
         
         };
 
@@ -93,11 +93,11 @@
           type: "size",
           field: "Pop_2015",
           stops: [{
-              value: 2,
+              value: 10,
               size: "4px"
             },
             {
-              value: 20,
+              value: 40,
               size: "40px"
             }
           ]
