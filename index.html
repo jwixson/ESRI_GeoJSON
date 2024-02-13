@@ -31,17 +31,17 @@
 
         esriConfig.apiKey = "AAPKf8d644b52cbe4547a6cf52b1dba78051_Xpnbv3L-3KkoIsY1iWO_jYtkKVaijNoYbTnhR3zdus6mF7v3nz5cP8PVYixqbxo";
 
-        const map = new Map({
-          basemap: "arcgis/topographic" // basemap styles service
-          //basemap: "arcgis/aerial"
-        });
+        // const map = new Map({
+        //   basemap: "arcgis/topographic" // basemap styles service
+        //   //basemap: "arcgis/aerial"
+        // });
 
-        const view = new MapView({
-          map: map,
-          center: [0,0], // Longitude, latitude
-          zoom: 5, // Zoom level
-          container: "viewDiv" // Div element
-        });
+        // const view = new MapView({
+        //   map: map,
+        //   center: [0,0], // Longitude, latitude
+        //   zoom: 5, // Zoom level
+        //   container: "viewDiv" // Div element
+        // });
       const updateBasemapStyle = (basemapId) => {
         view.map.basemap = basemapId;
               };
@@ -54,9 +54,9 @@
 
         
       });
-    </script>
+    // </script>
 
-    <script>
+    // <script>
     require(["esri/Map", "esri/layers/GeoJSONLayer", "esri/views/MapView"], (
       Map,
       GeoJSONLayer,
@@ -113,7 +113,18 @@
           field: "Pop_2015"
         }
       });
-
+              const map = new Map({
+          basemap: "arcgis/topographic" // basemap styles service
+          layers: [geojsonLayer] //basemap: "arcgis/aerial"
+        });
+      
+        const view = new MapView({
+          map: map,
+          center: [0,0], // Longitude, latitude
+          zoom: 5, // Zoom level
+          container: "viewDiv" // Div element
+        });
+      
       // const map = new Map({
       //   basemap: "gray-vector",
       //   layers: [geojsonLayer]
