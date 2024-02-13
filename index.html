@@ -81,16 +81,6 @@
       require(["esri/config", "esri/Map", "esri/views/MapView"], function(esriConfig, Map, MapView, GeoJSONLayer) {
 
         esriConfig.apiKey = "AAPKf8d644b52cbe4547a6cf52b1dba78051_Xpnbv3L-3KkoIsY1iWO_jYtkKVaijNoYbTnhR3zdus6mF7v3nz5cP8PVYixqbxo";
-
-      const updateBasemapStyle = (basemapId) => {
-        view.map.basemap = basemapId;
-              };
-              const basemapStylesDiv = document.getElementById("basemapStyles");
-      view.ui.add(basemapStylesDiv, "top-right");
-              const styleCombobox = document.getElementById("styleCombobox");
-      styleCombobox.addEventListener("calciteComboboxChange", (event) => {
-        updateBasemapStyle(event.target.value);
-      });
       const map = new Map({
           basemap: "arcgis/topographic", // basemap styles service
           layers: [geojsonLayer] //basemap: "arcgis/aerial"
@@ -102,6 +92,17 @@
           zoom: 5, // Zoom level
           container: "viewDiv" // Div element
         });
+        
+      const updateBasemapStyle = (basemapId) => {
+        view.map.basemap = basemapId;
+              };
+              const basemapStylesDiv = document.getElementById("basemapStyles");
+      view.ui.add(basemapStylesDiv, "top-right");
+              const styleCombobox = document.getElementById("styleCombobox");
+      styleCombobox.addEventListener("calciteComboboxChange", (event) => {
+        updateBasemapStyle(event.target.value);
+      });
+
         });
     </script>
         
